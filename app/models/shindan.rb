@@ -1,0 +1,2 @@
+class Shindan < ApplicationRecord
+end

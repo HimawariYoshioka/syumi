@@ -1,0 +1,66 @@
+<h1>GeekTwitter</h1>
+
+
+
+<h3>pastime詳細</h3>
+<div class="pastime">
+
+
+  <%= image_tag @pastime.image_url, size: "250x200" if @pastime.image? %>
+  <p><%= @pastime.genre %></p>
+  <p><%= @pastime.hobby %></p>
+  <p><%= @pastime.time %></p>
+  <p><%= @pastime.price %></p>
+  <p><%= @pastime.number %></p>
+  <p><%= @pastime.created_at %></p>
+
+  <% if user_signed_in? %>
+  <% if current_user.already_favorited?(@pastime) %>
+    <%= link_to pastime_favorite_path(@pastime), method: :delete do %>
+
+      <i class="fas fa-heart"></i><%= @pastime.favorites.count %>
+
+      <p>いいねを取り消す</p><%= @pastime.favorites.count %>
+    <% end %>
+  <% else %>
+    <%= link_to pastime_favorites_path(@pastime), method: :post do %>
+      <p>いいね</p><%= @pastime.favorites.count %>
+    <% end %>
+  <% end %>
+<% else %>
+  <p>いいねの数 = </p><%= @pastime.favorites.count %>
+<% end %>
+</div>
+
+
+
+<div class="comment-wrapper">
+  <p>コメント一覧</p>
+  <% @comments.each do |c| %>
+    <div>
+      <%= c.user.email unless c.user.blank? %>
+      <br>
+      <%= c.content %>
+    </div>
+      <br>
+  <% end %>
+
+  <% if user_signed_in? %>
+    <%= form_with(model: [@pastime, @comment], local: true) do |f| %>
+      <%= f.text_area :content %>
+      <%= button_tag type: "submit" do %>
+        <i class="far fa-comments"></i> コメントする
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+
+<%= link_to "pastime一覧に戻る", pastimes_path %>
+<%= link_to "編集する", edit_pastime_path(@pastime.id) %>
+
+<h2>いいねしたユーザー</h2>
+<% @pastime.favorited_users.each do |user| %>
+  <li><%= user.email %></li>
+<% end %>
+
+<%= link_to "pastime一覧に戻る", pastimes_path %>

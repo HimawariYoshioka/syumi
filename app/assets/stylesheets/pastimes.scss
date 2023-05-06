@@ -1,0 +1,58 @@
+// Place all the styles related to the pastimes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.ranking {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(41, 210, 210, 0);
+    margin: auto;
+    padding: 46px 0px;
+    .title_area{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 60px;
+        .title {
+            width: 670px;
+            height: 50px;
+            background-color: rgba(91, 226, 226, 0);
+            font-size: 35px;
+            line-height: 40px;
+            text-align: center;
+
+
+        }
+    }
+    .post {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+        .post1{
+            width: 25%;
+            margin: 3%;
+            text-align: center;
+            align-items: center;
+            background-color: rgb(255, 204, 18);
+        }
+        .post2 {
+            width: 25%;
+            margin: 3%;
+            text-align: center;
+            align-items: center;
+            background-color: darkgrey;
+        }
+        .post3 {
+            width: 25%;
+            margin: 3%;
+            text-align: center;
+            align-items: center;
+            background-color: coral;
+        }
+    }
+}

@@ -1,0 +1,89 @@
+<h1>自分の題名</h1>
+
+<%= link_to "自己診断へ", shindans_path %>
+
+<h3>一覧ページ</h3>
+
+<h3>投稿を検索</h3>
+    <%= form_tag({controller:"pastimes",action:"index"}, method: :get) do %>
+    <%= text_field_tag :search %>
+    <%= submit_tag '検索する'  %>
+    <% end %>
+
+    <%= link_to "スポーツ", "/pastimes/suports" %>
+    <%= link_to "観戦", "/pastimes/kansens" %>
+    <%= link_to "旅行", "/pastimes/travels" %>
+    <%= link_to "アウトドア", "/pastimes/outdoor" %>
+    <%= link_to "グルメ", "/pastimes/gurumes" %>
+    <%= link_to "料理", "/pastimes/cooks" %>
+    <%= link_to "作る", "/pastimes/makes" %>
+    <%= link_to "育てる", "/pastimes/sodaterus" %>
+    <%= link_to "音楽", "/pastimes/musics" %>
+    <%= link_to "芸術・鑑賞", "/pastimes/arts" %>
+    <%= link_to "踊る・ダンス", "/pastimes/dances" %>
+    <%= link_to "ゲーム", "/pastimes/games" %>
+    <%= link_to "エンタメ", "/pastimes/entames" %>
+    <%= link_to "ギャンブル", "/pastimes/gyanbuls" %>
+    <%= link_to "美容", "/pastimes/biyous" %>
+    <%= link_to "資格・スキルアップ", "/pastimes/studies" %>
+    <%= link_to "稼ぐ", "/pastimes/earns" %>
+    <%= link_to "コレクション", "/pastimes/collections" %>
+    <%= link_to "奉仕活動", "/pastimes/volunteers" %>
+    <%= link_to "その他", "/pastimes/others" %>
+    
+
+<p><%= link_to "新規投稿へ", new_pastime_path %><p/>
+<div class="pastimes-container">
+
+<% if user_signed_in? %>
+<%= link_to "マイページへ", user_path(current_user.id) %>
+<% end %>
+
+<% @pastimes.each do |t| %>
+    <div class="pastime">
+
+    <%= image_tag t.image_url, size: "250x200" if t.image? %>
+
+    <%= link_to t.user.name, user_path(t.user.id) %>
+   
+    
+      <%= t.genre %>
+      <%= t.hobby %>
+      <%= t.time %>
+      <%= t.price %>
+      <%= t.number %>
+     
+      
+      <% if user_signed_in? %>
+      <% if current_user.already_favorited?(t) %>
+         <%= link_to pastime_favorite_path(id: t.id, pastime_id: t.id), method: :delete do %>
+            
+            <i class="fas fa-heart"></i><%= t.favorites.count %>
+           
+         <% end %>
+      <% else %>
+         <%= link_to pastime_favorites_path(id: t.id, pastime_id: t.id), method: :post do %>
+            
+            <i class="far fa-heart"></i><%= t.favorites.count %>
+           
+         <% end %>
+      <% end %>
+  <% else %>
+      
+      <i class="far fa-heart"></i><%= t.favorites.count %>
+     
+  <% end %>
+
+      <%= link_to "詳細へ", pastime_path(t.id) %>
+
+      <% if user_signed_in? && current_user.id == t.user_id %>
+      <%= link_to "編集する", edit_pastime_path(t.id) %>
+      <%= link_to "削除する", pastime_path(t.id), method: :delete %>
+    <% end %> 
+
+    
+    
+<% end %>
+</div>
+
+

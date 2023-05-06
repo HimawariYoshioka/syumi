@@ -1,0 +1,35 @@
+<h1>users#show</h1>
+<p>名前 : <%= @user.name %></p>
+<p>メールアドレス : <%= @user.email %></p>
+<p>プロフィール : <%= @user.profile %></p>
+<%= image_tag @user.image_url, size: "250x200" if @user.image? %>
+
+<% if current_user.id == @user.id %>
+  <%= link_to "編集する", edit_user_registration_path %>
+<% end %>
+<%= render 'follow_form' %>
+<%= render 'stats' %>
+<h2>ユーザーの投稿一覧</h2>
+<% @user.pastimes.each do |t| %>
+  <%= t.user.name %>
+  <%= t.genre %>
+  <%= t.hobby %>
+  <%= t.time %>
+  <%= t.price %>
+  <%= t.number %>
+<% end %>
+
+
+<h2>ユーザーがいいねした投稿一覧</h2>
+<% @user.favorited_pastimes.each do |t| %>
+  
+  <%= t.user.name %>
+  <%= t.genre %>
+  <%= t.hobby %>
+  <%= t.time %>
+  <%= t.price %>
+  <%= t.number %>
+<% end %>
+
+
+<%= link_to "pastime一覧に戻る", pastimes_path %>
