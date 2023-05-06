@@ -1,3 +1,82 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.godon{
+    background-image: url("cats.jpg");
+    background-size: cover;
+    width: 30%;
+    margin-left: 100px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.daimei{
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.field1{
+    margin-left: 50px;
+    height: 80px;
+    margin-top: 25px;
+}
+
+.field2{
+    margin-left: 125px;
+    height: 80px;
+}
+
+.field3{
+    margin-left: 200px;
+    height: 80px;
+}
+
+.field4{
+    margin-left: 270px;
+    height: 80px;
+}
+
+.actions{
+    margin-left: 470px;
+    height: 40px;
+}
+
+.field-image {
+    width: 40%;
+    height: 150px;
+}
+
+
+
+
+.login{
+    background-image: url("女の子とパソコン.jpg");
+    background-size: cover;
+    width: 30%;
+    margin-left: 125px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.field5{
+    margin-left: 200px;
+    height: 60px;
+    margin-top: 100px;
+}
+
+.field6{
+    margin-left: 200px;
+    height: 60px;
+    margin-top: 20px;
+}
+
+.field7{
+    margin-left: 200px;
+    height: 60px;
+    margin-top: 20px;
+}
