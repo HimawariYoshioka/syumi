@@ -80,3 +80,57 @@
     height: 60px;
     margin-top: 20px;
 }
+
+.name{
+
+}
+
+.mypage{
+    display:flex;
+    width: 100%;
+ }
+ .image{
+    margin: 20px;
+ }
+ .profile{
+    width: 50%;
+    margin: 20px;
+}
+.edit{
+    margin: 130px 50px 0px;
+    
+}
+
+
+
+
+.profile{
+    position: relative;
+    margin-bottom: 4em;
+    padding: 2.0rem 2rem;
+    border-radius: 20px;
+    background: #fbd7d7;}
+
+.profile:before,
+.profile:after {
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  background: #fbd7d7;
+}
+
+.profile:before {
+  right: 15px;
+  bottom: -15px;
+  width: 45px;
+  height: 60px;
+}
+
+.profile:after {
+  right: 45px;
+  bottom: -30px;
+  width: 20px;
+  height: 15px;
+}
+
+
