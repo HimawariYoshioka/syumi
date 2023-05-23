@@ -1,43 +1,78 @@
-<h1>(自分の題名)</h1>
-<h3>新規投稿ページ</h3>
-<%= form_for @pastime do |f| %>
 
-# データ型がstringで自由記述の入力フォーム
+<div class="new_area">
+<div class="new_area_title">
 
-
-  <div class="field">
-    <%= f.label :名前%>
-    <%= f.text_field :hobby, :size => 30 %>
-  </div>
-
-  <div class="field">
-    <%= f.label :時間%>
-    <%= f.text_field :time, :size => 30 %>
-  </div>
-
-  <div class="field">
-    <%= f.label :価格%>
-    <%= f.text_field :price, :size => 30 %>
-  </div>
-
-  <div class="field">
-  <%= f.label :人数%>
-  <%= f.text_field :number, :size => 30 %>
-
-  <div class="field">
-  <%= f.label :コメント%>
-  <%= f.text_field :number, :size => 60 %>
 </div>
 
-<div class="field">
-    <%= f.label :image %>
+<div class="new_area_start">
+<h1>新規投稿ページ</h1>
+<h3>みんなと趣味を共有しよう✨</h3>
+</div>
+
+<div class="setumei">
+<p>細かく書くとみんなが参考にしやすい!</p>
+<p>空欄があっても大丈夫！投稿できる！</p>
+</div>
+</div>
+
+<%= form_for @pastime do |f| %>
+
+  <div class="field_new">
+    <%= f.label :ジャンルを言葉にすると？%>
+    </div>
+    <div class="ran">
+    <%= f.text_field :genre, :size => 40 %>
+    </siv>
+  </div>
+
+
+  <div class="field_new">
+    <%= f.label :名前はなに？%></div>
+    <div class="ran">
+    <%= f.text_field :hobby, :size => 40 %>
+  </div>
+
+  <div class="field_new">
+  <%= f.label :金額はどのくらい？%></div>
+  <div class="ran">
+  <%= f.text_field :price, :size => 40 %>
+  </div>
+</div>
+
+<div class="field_new">
+  <%= f.label :どのくらいの期間やってる？%></div>
+  <div class="ran">
+  <%= f.text_field :time, :size => 40 %>
+  </div>
+</div>
+
+<div class="field_new">
+  <%= f.label :人数は何人からできる？%></div>
+  <div class="ran">
+  <%= f.text_field :number, :size => 40 %></div>
+</div>
+
+  <div class="field_new">
+  <%= f.label :感想など思いのたけをぶつけてね！%></div>
+  <div class="ran">
+  <%= f.text_field :comment, :size => 100 %></div>
+</div>
+
+<div class="field_new">
+    <%= f.label :写真とかはある？ %></div>
+    <div class="ran">
     <%= f.file_field :image %>
   </div>
 
-  <%= f.select :category, [["スポーツ", "suports"], ["観戦", "kansens"], ["旅行", "travels"], ["アウトドア", "outdoor"], ["作る", "makes"], ["育てる", "sodaterus"], ["音楽", "musics"], ["芸術・鑑賞", "arts"], ["踊る・ダンス", "dances"], ["ゲーム", "games"], ["エンタメ", "entames"], ["ギャンブル", "gyanbuls"], ["美容", "biyous"], ["資格・スキルアップ", "studies"], ["稼ぐ", "earns"], ["コレクション", "collections"], ["奉仕活動", "volunteers"], ["その他", "others"]], include_blank: "どの投稿？" %>
+  <div class="category_new">
+  <%= f.select :category, [["スポーツ・観戦", "suports"], ["旅行・アウトドア", "travels"], ["作る・育てる", "makes"], ["音楽", "musics"], ["芸術・鑑賞", "arts"], ["ダンス", "dances"], ["ゲーム", "games"], ["エンタメ", "entames"], ["読書", "gyanbuls"], ["美容・健康", "biyous"], ["スキルアップ", "studies"], ["コレクション", "collections"], ["絵を描く", "volunteers"], ["その他", "others"], ["グルメ・料理", "gurumes"]], include_blank: "当てはまるカテゴリーを選ぼう！" %>
+</div>
 
-
-  <%= f.submit "投稿する" %>
+<div class="submit_new">
+  <%= f.submit "投稿する" %></div>
 <% end %>
 
-<%= link_to "一覧に戻る", pastimes_path %>
+<div class="tophe_new">
+<%= link_to "トップに戻る", pastimes_path %>
+
+</div>

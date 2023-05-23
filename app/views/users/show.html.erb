@@ -1,53 +1,170 @@
-<h1>マイページ</h1>
 
-
-  <div class="name">
-    <p> <%= @user.name %></p>
-  </div>
+<div class="mypage_area">
+<div class="mypage_title">
+<p>マイページ</p>
+</div>
 
   <div class="mypage">
-  <div class="image">
-    <%= image_tag @user.image_url, size: "150x160" if @user.image? %>
+
+  <div class="flexbox_1">
+  <%= image_tag 'カレンダーと花.jpg', class:'flower' %>
+
+      <div class="name">
+        <span class="under2"> <%= @user.name %></span>
+      </div>
+
   </div>
 
+    <div class="flexbox">
+      <div class="image">
+        <%= image_tag @user.image_url, size: "150x160" if @user.image? %>
+      </div>
 
-  <div class="profile">
-    <p> <%= @user.profile %></p>
-  </div>
 
+      <div class="profile">
+        <p> <%= @user.profile %></p>
+      </div>
+    </div>
 
-
-  <div class="edit">
-    <% if current_user.id == @user.id %>
-    <%= link_to "編集する", edit_user_registration_path %>
     
-  <% end %>
+      <div class="edit">
+        <% if current_user.id == @user.id %>
+        <%= link_to "編集する", edit_user_registration_path %>
+    
+        <% end %>
+  
+      </div>
+
   </div>
 </div>
 
-<%= render 'follow_form' %>
-<%= render 'stats' %>
-<h2>ユーザーの投稿一覧</h2>
-<% @user.pastimes.each do |t| %>
-  <%= t.user.name %>
-  <%= t.genre %>
-  <%= t.hobby %>
-  <%= t.time %>
-  <%= t.price %>
-  <%= t.number %>
-<% end %>
+
+<div class="follow">
+  <%= render 'follow_form' %>
+  <%= render 'stats' %>
+</div>
 
 
-<h2>ユーザーがいいねした投稿一覧</h2>
-<% @user.favorited_pastimes.each do |t| %>
-  
-  <%= t.user.name %>
-  <%= t.genre %>
-  <%= t.hobby %>
-  <%= t.time %>
-  <%= t.price %>
-  <%= t.number %>
-<% end %>
+<div class="user_post_area">
+
+<div class="user_title_area">
+<%= image_tag '整理.jpg', class:'clean' %>
+
+  <div class="user_post_title">
+    <p>ユーザーの投稿一覧</p>
+  </div>
+</div>
+
+  <div class="user_post">
+    <% @user.pastimes.each do |t| %>
+
+      <div class="genre">
+      <span class="under"><%= t.hobby %></span>
+      </div>
+
+      <div class="flexbox_2">
+
+        
+    
+        <div class="post_show">
+
+          
+            <div class="post_image">
+              <%= image_tag t.image_url, size: "150x100" if t.image? %>
+            </div>
 
 
-<%= link_to "pastime一覧に戻る", pastimes_path %>
+            <div class="post_comment">
+                <%= t.comment %>
+            </div>
+        </div>
+
+            <div class="post_show2">
+            <div class="my_youso1">
+                <p>期間</p><%= t.time %></div>
+                <div class="my_youso2">
+                <p>価格</p><%= t.price %></div>
+                <div class="my_youso3">
+                <p>人数</p>
+                <%= t.number %>
+            </div>
+
+          
+
+        
+
+      </div>
+
+      <div class="user_name">
+        <%= t.user.name %>
+      </div>
+
+    <% end %>
+  </div>
+
+</div>
+
+
+<div class="favorite_post_area">
+
+<div class="favorite_title_area">
+<%= image_tag '写真.jpg', class:'picture' %>
+
+  <div class="favorite_post_title">
+    <p>ユーザーがいいねした投稿一覧</p>
+  </div>
+</div>
+
+  <div class="f_user_post">
+  <% @user.favorited_pastimes.each do |t| %>
+
+      <div class="genre">
+      <span class="under"><%= t.hobby %></span>
+      </div>
+
+      <div class="flexbox_f1">
+
+        
+    
+        <div class="f_post_show">
+
+          
+            <div class="f_post_image">
+              <%= image_tag t.image_url, size: "150x100" if t.image? %>
+            </div>
+
+
+            <div class="f_post_comment">
+                <%= t.comment %>
+            </div>
+        </div>
+
+            <div class="f_post_show2">
+            <div class="my_youso1">
+                <p>期間</p><%= t.time %></div>
+                <div class="my_youso2">
+                <p>価格</p><%= t.price %></div>
+                <div class="my_youso3">
+                <p>人数</p>
+                <%= t.number %>
+            </div>
+            </div>
+
+          
+
+        
+
+      </div>
+
+      <div class="user_name">
+        <%= t.user.name %>
+      </div>
+
+    <% end %>
+  </div>
+
+</div>
+
+
+<div class="last">
+<%= link_to "pastime一覧に戻る", pastimes_path %></div>

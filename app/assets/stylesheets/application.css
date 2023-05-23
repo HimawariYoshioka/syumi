@@ -17,30 +17,37 @@
  * {
     padding: 0;
     margin: 0;
+    
   }
   body {
     font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
       Meiryo, "ＭＳ Ｐゴシック", sans-serif;
   }
   header {
-    background-color: #f0f72b;
-    height: 80px;
+    background-color: #fffb22;
+    height: 70px;
     font-weight: bold;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
   }
   header a {
     color: white; 
     text-decoration: none; 
+    font-family: 'Yusei Magic', sans-serif;
+
   }
   header h1 {
     color: white;
-    margin-left: 20px;
+    margin-left: 50px;
+    font-family: 'Yusei Magic', sans-serif;
+    font-size:40px;
   }
   .header-list {
     display: flex;
     align-items: center;
+    margin:30px;
   }
   header ul {
     display: flex;

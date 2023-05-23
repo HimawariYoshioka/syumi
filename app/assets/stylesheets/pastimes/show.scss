@@ -1,0 +1,71 @@
+.show_title{
+    font-size:30px;
+    font-family: 'Yusei Magic', sans-serif;
+}
+
+.show_name{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size:26px;
+    margin:10px;
+}
+
+.show_show{
+    display: flex;
+    .show_image{}
+
+    .show_comment{
+        font-family: 'Yusei Magic', sans-serif;
+        background: repeating-linear-gradient(-45deg, rgba(139,198,202,.3), rgba(139,198,202,.3) 10px, #fff 0, #fff 20px);
+        padding: 1em;
+        color: #65513f;
+        width:500px;
+        margin-left:15px;
+    }
+}
+
+.show_showsai{
+    display: flex;
+    position:relative;
+    left:200px;
+
+    .show_youso{
+        font-family: 'Yusei Magic', sans-serif;
+    }
+    .show_youso2{
+        font-family: 'Yusei Magic', sans-serif;
+        margin-left:15px;
+    }
+    .show_youso3{
+        font-family: 'Yusei Magic', sans-serif;
+        margin-left:15px;
+    }
+}
+.date{
+    font-family: 'Yusei Magic', sans-serif;
+    position:relative;
+    left:600px;
+}
+
+.comment-wrapper{
+    font-family: 'Yusei Magic', sans-serif;
+    margin-left:10px;
+}
+
+.far fa-comments{
+    font-family: 'Yusei Magic', sans-serif;
+}
+
+.show_link{
+    font-family: 'Yusei Magic', sans-serif;
+    margin-left:15px;
+}
+
+.show_iine_user{
+    font-family: 'Yusei Magic', sans-serif;
+    margin-left:15px;
+
+    .show_iine_usertitle{
+        font-family: 'Yusei Magic', sans-serif;
+        font-size:20px;
+    }
+}

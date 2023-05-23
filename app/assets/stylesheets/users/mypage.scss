@@ -1,0 +1,232 @@
+.mypage_area{
+    .mypage_title{
+        font-size: 26px;
+        font-family: 'Yusei Magic', sans-serif;
+        padding:15px;
+    }
+
+
+.flexbox_1{
+    display:flex;
+.flower{
+    width:80px;
+    height:80px;
+}
+
+    .name{
+        position:relative;
+        left:80px;
+        font-size: 20px;
+        height:50px;
+        margin-top:30px;
+        margin-left:-50px;
+
+        .under2{border-bottom: dotted 2px #f6911e;}
+        
+    }
+}
+    .flexbox div{
+        
+        margin-left: 50px;
+        width: 200px;
+        height: 150px;
+      }
+
+
+    .flexbox{
+        display:flex;
+        
+        .image{
+            position:relative;
+            width:140px;
+            height:170px;
+            left:20px;
+            
+            
+        }
+
+        .profile{
+            background: #fce678;
+            background-image: radial-gradient(#fff 20%, transparent 0), radial-gradient(#fff 20%, transparent 0);
+            background-position: 0 0, 10px 10px;
+            background-size: 20px 20px;
+            padding: 1em;
+            color: #593869;
+            width:500px;
+            height:100px;
+            font-family: 'Yusei Magic', sans-serif;
+            font-size: 16px;
+            margin-left:90px;
+        }
+    }
+
+    .edit{
+        position:relative;
+        left:850px;
+        font-family: 'Yusei Magic', sans-serif;
+    }
+}
+.follow{
+    font-family: 'Yusei Magic', sans-serif;
+}
+
+
+.user_post_area{
+    margin:10px;
+
+.user_title_area{
+    display:flex;
+
+    .clean{
+        width:80px;
+        height:80px;
+    }
+
+    .user_post_title{
+        font-size:26px;
+        font-family: 'Yusei Magic', sans-serif;
+        line-height: 70px;
+    }
+}
+
+    .user_name{
+        position:relative;
+        font-size:14px;
+        font-family: 'Yusei Magic', sans-serif;
+        left:800px;
+        top:-10px;
+    }
+
+
+    .genre{
+        font-size:22px;
+        font-family: 'Yusei Magic', sans-serif;       
+        padding:10px; 
+        
+        .under{border-bottom: dotted 2px #87CEFA;}
+    }
+
+    .post_show{
+        display:flex;
+        padding:5px;
+        
+
+        .post_image{
+
+        }
+        .post_comment{
+            font-family: 'Yusei Magic', sans-serif;
+            margin:20px;
+            position: relative;
+            background: repeating-linear-gradient(-45deg, rgba(139,198,202,.3), rgba(139,198,202,.3) 10px, #fff 0, #fff 20px);
+            padding: 1em;
+            color: #65513f;
+            width:500px;
+        
+        }
+    }
+    
+    .post_show2{
+        display:flex;
+        position:relative;
+        left:300px;
+
+        .my_youso1{
+            font-family: 'Yusei Magic', sans-serif;
+        }
+
+        .my_youso2{
+            font-family: 'Yusei Magic', sans-serif;
+            margin-left:15px;
+        }
+        .my_youso3{
+            font-family: 'Yusei Magic', sans-serif;
+            margin-left:15px;
+        }
+        }
+
+
+
+}
+
+.favorite_post_area{
+    margin:10px;
+
+    .favorite_title_area{
+        display:flex;
+
+        .picture{
+        width:80px;
+        height:80px;
+        }
+
+        .favorite_post_title{
+        font-size:26px;
+        font-family: 'Yusei Magic', sans-serif;
+        line-height: 70px;
+        }
+    }
+
+    .f_user_name{
+        position:relative;
+        font-size:14px;
+        font-family: 'Yusei Magic', sans-serif;
+        left:800px;
+        top:-10px;
+    }
+
+
+    .genre{
+        font-size:22px;
+        font-family: 'Yusei Magic', sans-serif;       
+        padding:10px; 
+        
+        .under{border-bottom: dotted 2px #99f959;}
+    }
+
+    .f_post_show{
+        display:flex;
+        padding:5px;
+        
+
+        .f_post_image{
+
+        }
+        .f_post_comment{
+            font-family: 'Yusei Magic', sans-serif;
+            margin:20px;
+            position: relative;
+            background: repeating-linear-gradient(-45deg, rgba(41, 253, 76, 0.3), rgba(67, 246, 79, 0.3) 10px, #fff 0, #fff 20px);
+            padding: 1em;
+            color: #3f6548;
+            width:500px;
+        
+        }
+    }
+    
+    .f_post_show2{
+        display:flex;
+        position:relative;
+        left:300px;
+
+        .my_youso1{
+            font-family: 'Yusei Magic', sans-serif;
+        }
+
+        .my_youso2{
+            font-family: 'Yusei Magic', sans-serif;
+            margin-left:15px;
+        }
+        .my_youso3{
+            font-family: 'Yusei Magic', sans-serif;
+            margin-left:15px;
+        }
+        }
+
+
+
+}
+
+.last{
+    font-family: 'Yusei Magic', sans-serif;
+}

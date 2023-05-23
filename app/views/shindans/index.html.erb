@@ -5,16 +5,24 @@
         <title>診断スタート</title><!--ブラウザのタブのタイトルを指定-->
     </head>
 
+<div class="shindan_area">
 
-<h1>趣味を探そう</h1>
+    <div class="shindan_title">
+    <span class="s_under">趣味を探そう</span>
+    </div>
 
     <body>
-        <div class="start">
-            <h6>「何しようかな～」
+        <div class="shindan_start">
+            <p>「何しようかな～」
             <br>そう思ったら一回試してみて！</br>
             <br>独断と偏見でおすすめを紹介！</br>
-            <br>参考にしてみてね！</br>
-            </h6>
+            <br>新たな趣味に出会えますように✨</br>
+            </p>
+        </div>
+
+        <div class="shindan_link">
             <%= link_to "診断を始める", new_shindan_path, class: "link" %>
         </div>
     </body>
+
+</div>

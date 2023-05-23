@@ -1,0 +1,79 @@
+.suport_post_area{
+
+
+    .suport_post_title1{
+        display: flex;
+        margin:15px;
+    .suport{
+        width:70px;
+        height:70px;
+    }
+    .suport_post_title{
+        font-family: 'Yusei Magic', sans-serif;
+        font-size:30px;
+        line-height: 70px;
+    } 
+}
+
+    .suport_post{
+        .s_post_title{
+            position:relative;
+            font-family: 'Yusei Magic', sans-serif;
+            font-size:22px;
+            left:30px;
+        }
+        .s_post_show{
+            display:flex;
+            margin:10px;
+                        }
+            
+        .suport_post_image{}
+
+        .s_post_comment{
+            font-family: 'Yusei Magic', sans-serif;
+            background: repeating-linear-gradient(-45deg, rgba(139,198,202,.3), rgba(139,198,202,.3) 10px, #fff 0, #fff 20px);
+            padding: 1em;
+            color: #65513f;
+            width:500px;
+            margin-left:15px;
+        }
+
+        .s_post_show2{
+            position:relative;
+            display:flex;
+            font-family: 'Yusei Magic', sans-serif;
+            left:300px;
+
+            .s_youso{
+                font-family: 'Yusei Magic', sans-serif;
+            }
+            .s_youso2{
+                font-family: 'Yusei Magic', sans-serif;
+                margin-left:15px;
+            }
+            .s_youso3{
+                font-family: 'Yusei Magic', sans-serif;
+                margin-left:15px;
+            }
+        }
+    }
+
+
+    .user_show{
+        display: flex;
+        .s_post_username{
+            font-family: 'Yusei Magic', sans-serif;
+            position:relative;
+            left:700px;
+        }
+    
+
+    }
+    .henkou{
+        position:relative;
+        left:700px;
+        top:-50px;
+        font-family: 'Yusei Magic', sans-serif;
+    }
+
+}

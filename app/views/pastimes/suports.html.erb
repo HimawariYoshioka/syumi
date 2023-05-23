@@ -1,42 +1,86 @@
-スポーツ一覧
 
-<% @suports.each do |t| %>
+<div class="suport_post_area">
+
+<div class="suport_post_title1">
+<%= image_tag 'スポーツ.jpg', class:'suport' %>
+  <div class="suport_post_title">
+    <p>スポーツ一覧</p>
+  </div>
+  </div>
+
+
+  <div class="suport_post">
+    <% @suports.each do |t| %>
+
+    <div class="s_post_title">
+      <%= t.hobby %>
+    </div> 
+
+    <div class="s_post_show">
+      <div class="suport_post_image">
+        <%= image_tag t.image_url, size: "150x100" if t.image? %>
+      </div>
+
+      <div class="s_post_comment">
+        <%= t.comment %>
+      </div>
+        
+    </div>
+
+    <div class="s_post_show2">
+    <div class="s_youso">
+      <p>期間</p><%= t.time %></div>
+      <div class="s_youso2">
+      <p>価格</p><%= t.price %></div>
+      <div class="s_youso3">
+      <p>人数</p><%= t.number %>
+      </div>
+    </div>
+
+
+
+    <div class="user_show">
+    <div class="s_post_username">
+    <%= link_to t.user.name, user_path(t.user.id) %>
+    </div>
+
+  </div>
     
-  <%= image_tag t.image_url, size: "250x200" if t.image? %>
 
-  <%= t.user.email %>
-  <%= image_tag t.user.image_url, size: "250x200" if t.user.image? %>
-    <%= t.genre %>
-    <%= t.hobby %>
-    <%= t.time %>
-    <%= t.price %>
-    <%= t.number %>
-    
-    <% if user_signed_in? %>
-    <% if current_user.already_favorited?(t) %>
-        <%= link_to pastime_favorite_path(id: t.id, pastime_id: t.id), method: :delete do %>
+  
+      <% if user_signed_in? %>
+      <% if current_user.already_favorited?(t) %>
+          <%= link_to pastime_favorite_path(id: t.id, pastime_id: t.id), method: :delete do %>
 
-          <i class="fas fa-heart"></i><%= t.favorites.count %>
+            <i class="fas fa-heart"></i><%= t.favorites.count %>
 
             <p>いいねを取り消す</p><%= t.favorites.count %>
-        <% end %>
-    <% else %>
+          <% end %>
+      <% else %>
+      
         <%= link_to pastime_favorites_path(id: t.id, pastime_id: t.id), method: :pastime do %>
             <p>いいね</p><%= t.favorites.count %>
         <% end %>
+      <% end %>
+    <% else %>
+      <p>いいねの数 = </p><%= t.favorites.count %>
     <% end %>
-<% else %>
-    <p>いいねの数 = </p><%= t.favorites.count %>
-<% end %>
+   
 
+</div>
+
+
+<div class="henkou">
     <%= link_to "詳細へ", pastime_path(t.id) %>
 
     <% if user_signed_in? && current_user.id == t.user_id %>
-    <%= link_to "編集する", edit_pastime_path(t.id) %>
-    <%= link_to "削除する", pastime_path(t.id), method: :delete %>
-  <% end %> 
+      <%= link_to "編集する", edit_pastime_path(t.id) %>
+      <%= link_to "削除する", pastime_path(t.id), method: :delete %>
+    <% end %> 
 
+  </div>
   
+  <% end %>
   
-<% end %>
 </div>
+

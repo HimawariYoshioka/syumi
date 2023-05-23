@@ -1,59 +1,151 @@
 
- <h1>自分の題名</h1>
 
-<%= link_to "自己診断へ", shindans_path %>
+<div class="top">
 
-<h3>一覧ページ</h3>
+    <div class="title_area">
 
-<h3>投稿を検索</h3>
-    <%= form_tag({controller:"pastimes",action:"index"}, method: :get) do %>
-    <%= text_field_tag :search %>
-    <%= submit_tag '検索する'  %>
-    <% end %>
+    
+        
+        <div class="memo">
+        <span class="masking-tape">
+        </span>
+    
+        <div class="title_1">
+             趣味を増やして生活に更なる彩を。
+        </div>
+        
 
-    <%= link_to "スポーツ", "/pastimes/suports" %>
-    <%= link_to "観戦", "/pastimes/kansens" %>
-    <%= link_to "旅行", "/pastimes/travels" %>
-    <%= link_to "アウトドア", "/pastimes/outdoor" %>
-    <%= link_to "グルメ", "/pastimes/gurumes" %>
-    <%= link_to "料理", "/pastimes/cooks" %>
-    <%= link_to "作る", "/pastimes/makes" %>
-    <%= link_to "育てる", "/pastimes/sodaterus" %>
-    <%= link_to "音楽", "/pastimes/musics" %>
-    <%= link_to "芸術・鑑賞", "/pastimes/arts" %>
-    <%= link_to "踊る・ダンス", "/pastimes/dances" %>
-    <%= link_to "ゲーム", "/pastimes/games" %>
-    <%= link_to "エンタメ", "/pastimes/entames" %>
-    <%= link_to "ギャンブル", "/pastimes/gyanbuls" %>
-    <%= link_to "美容", "/pastimes/biyous" %>
-    <%= link_to "資格・スキルアップ", "/pastimes/studies" %>
-    <%= link_to "稼ぐ", "/pastimes/earns" %>
-    <%= link_to "コレクション", "/pastimes/collections" %>
-    <%= link_to "奉仕活動", "/pastimes/volunteers" %>
-    <%= link_to "その他", "/pastimes/others" %>
+        </div>
+        <%= image_tag '赤い服の女の子と猫.jpg', class:'red_girl' %>
+        <%= image_tag '青花.jpg', class:'blue_flower' %>
+        <%= image_tag '筋トレ.jpg', class:'green_kintore' %>
+    </div>
+
+
+    <div class="newpost_area">
+        <div class="newpost">
+            <p>投稿してみんなと趣味を共有しよう✨</p>
+        </div>  
+        <div class="newpost_link">
+            <p><%= link_to "新規投稿", new_pastime_path %><p/>
+        </div>
+
+            <%= image_tag 'キラキラ.jpg', class:'stars' %>
+            <%= image_tag '絵を描く.jpg', class:'draw' %>
+
+    </div>
+
+
+<div class="search_area">
+
+
+    <div class="search_title">
+        投稿を探してみよう✨
+    </div>
+
+    <%= image_tag 'いいねランキング.jpg', class:'image_ranking' %>
+    <%= image_tag '自己診断.jpg', class:'image_shindan' %>
+    <%= image_tag '投稿.jpg', class:'image_post' %>
+
+
+    <div class="iineranking">
+        <%= link_to "いいねランキング", pastimes_top_path %>
+    </div>
+
+    <div class="shindan">
+        <%= link_to "自己診断", shindans_path %>
+    </div>
+
+    <div class="s_post">
+        <p>見て探す</p>
+        <p>下へレツゴ～🍀</p>
+    </div>
+
+    
     
 
-<p><%= link_to "新規投稿へ", new_pastime_path %><p/>
-<div class="pastimes-container">
 
-<% if user_signed_in? %>
-<%= link_to "マイページへ", user_path(current_user.id) %>
-<% end %>
+
+
+    
+    <div class="free_search_area">
+        <div class="free_search_title">
+        <p>自由に文字を打ち込んで検索しよう😎</p>
+        </div>   
+
+        <div class="free search">
+            <%= form_tag({controller:"pastimes",action:"index"}, method: :get) do %>
+            <%= text_field_tag :search %>
+            <%= submit_tag '検索する'  %>
+            <% end %>
+        </div>
+
+    </div>  
+    
+
+   
+
+    </div>
+
+</div>
+
+<div class="category">
+        <p>カテゴリごとで探してみよう😚</p>
+    
+             
+            <%= link_to "スポーツ・観戦", "/pastimes/suports" %>
+            <%= link_to "旅行・アウトドア", "/pastimes/travels" %>
+            <%= link_to "グルメ・料理", "/pastimes/gurumes" %>
+            <%= link_to "作る・育てる", "/pastimes/makes" %>
+            <%= link_to "音楽", "/pastimes/musics" %>
+            <%= link_to "芸術・鑑賞", "/pastimes/arts" %>
+            <%= link_to "ダンス", "/pastimes/dances" %>
+            <%= link_to "ゲーム", "/pastimes/games" %>
+            <%= link_to "エンタメ", "/pastimes/entames" %>
+            <%= link_to "読書", "/pastimes/gyanbuls" %>
+            <%= link_to "美容・健康", "/pastimes/biyous" %>
+            <%= link_to "スキルアップ", "/pastimes/studies" %>
+            <%= link_to "コレクション", "/pastimes/collections" %>
+            <%= link_to "絵を描く", "/pastimes/volunteers" %>
+            <%= link_to "その他", "/pastimes/others" %>
+       
+</div>
+
+
+
+
+<div class="itiran">
+<div class="itiran_title">
+<p>一覧ページ</p></div>
+
 
 <% @pastimes.each do |t| %>
-    <div class="pastime">
-
-    <%= image_tag t.image_url, size: "250x200" if t.image? %>
-
-    <%= link_to t.user.name, user_path(t.user.id) %>
-   
     
-      <%= t.genre %>
-      <%= t.hobby %>
-      <%= t.time %>
-      <%= t.price %>
-      <%= t.number %>
-     
+<div class="p_post_name">
+<span class="under_p"><%= t.hobby %></span>
+</div>
+
+    <div class="pastime">
+<div class="p_image">
+    <%= image_tag t.image_url, size: "150x100" if t.image? %>
+</div>
+   
+   
+    <div class="p_comment">
+    <%= t.comment %></div>
+      
+</div>
+<div class="p_show">
+    <div class="youso">
+      <p>期間</p><%= t.time %></div>
+      <div class="youso2">
+      <p>価格</p><%= t.price %></div>
+      <div class="youso3">
+      <p>人数</p><%= t.number %>
+      </div>
+     </div>
+<div class="p_username">
+     <%= link_to t.user.name, user_path(t.user.id) %></div>
       
       <% if user_signed_in? %>
       <% if current_user.already_favorited?(t) %>
@@ -85,6 +177,8 @@
     
     
 <% end %>
+</div>
 
+</div>
 </div>
 

@@ -1,18 +1,33 @@
-<h1>GeekTwitter</h1>
 
 
 
-<h3>pastime詳細</h3>
+<div class="show_title">
+<p>詳細</p></div>
 <div class="pastime">
 
+<div class="show_name">
+<p><%= @pastime.hobby %></p></div>
 
-  <%= image_tag @pastime.image_url, size: "250x200" if @pastime.image? %>
-  <p><%= @pastime.genre %></p>
-  <p><%= @pastime.hobby %></p>
-  <p><%= @pastime.time %></p>
-  <p><%= @pastime.price %></p>
-  <p><%= @pastime.number %></p>
-  <p><%= @pastime.created_at %></p>
+<div class="show_show">
+
+<div class="show_image">
+  <%= image_tag @pastime.image_url, size: "150x100" if @pastime.image? %></div>
+  
+  <div class="show_comment">
+  <p><%= @pastime.comment %></p></div>
+</div>
+
+  <div class="show_showsai">
+  <div class="show_youso">
+  <p>期間</p><%= @pastime.time %></div>
+  <div class="show_youso2">
+  <p>価格</p><%= @pastime.price %></div>
+  <div class="show_youso3">
+  <p>人数</p><%= @pastime.number %></div>
+  </div>
+
+  <div class="date">
+  <p><%= @pastime.created_at %></p></div>
 
   <% if user_signed_in? %>
   <% if current_user.already_favorited?(@pastime) %>
@@ -38,7 +53,7 @@
   <p>コメント一覧</p>
   <% @comments.each do |c| %>
     <div>
-      <%= c.user.email unless c.user.blank? %>
+      <%= c.user.name unless c.user.blank? %>
       <br>
       <%= c.content %>
     </div>
@@ -55,12 +70,18 @@
   <% end %>
 </div>
 
-<%= link_to "pastime一覧に戻る", pastimes_path %>
+<div class="show_link">
+<%= link_to "トップに戻る", pastimes_path %>
 <%= link_to "編集する", edit_pastime_path(@pastime.id) %>
+</div>
 
-<h2>いいねしたユーザー</h2>
+<div class="show_iine_user">
+<div class="show_iine_usertitle">
+<p>いいねしたユーザー</p></div>
 <% @pastime.favorited_users.each do |user| %>
-  <li><%= user.email %></li>
+  <li><%= user.name %></li>
 <% end %>
+</div>
 
-<%= link_to "pastime一覧に戻る", pastimes_path %>
+<div class="show_link">
+<%= link_to "トップに戻る", pastimes_path %></div>

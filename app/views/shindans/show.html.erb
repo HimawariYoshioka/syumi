@@ -1,95 +1,153 @@
-<div class="intoro">
-<h5>こんなものはどうですか？</h5>
-</div>
+
 
 <div class="tweet-container">
-　<div class="tweet">
+　
     <% if @shindan.question == "1111" %>
-    <h6>こんなものはどうですか？</h6>
-    <p>スポーツ</p>
-    <p>稼ぐ</p>
+    <div class="shindan_show_title">
+    <p>行動的・考えて動くタイプのあなたへ！</p></div>
+    <div class="shindan_show_2">
+    <p>レジャー（旅行・アウトドア）</p></div>
+    <div class="shindan_show_3">
+    <p>川に行ったり山に登ったり！素敵な体験を…✨</p></div>
 
     <% elsif @shindan.question == "1112" %>
-    <h6>こんなものはどうですか？</h6>
-    <p>奉仕活動</p>
-    <p>コレクション</p>
+    <div class="shindan_show_title">
+    <p>でかけたい・けどゆっくりしたい…そんなあなたへ！</p></div>
+    <div class="shindan_show_2">
+    <p>キャンプ（旅行・アウトドア） </p></div>
+    <div class="shindan_show_3">
+    <p>キャンプなどで自然を感じながらゆっくりしてみてはいかが？✨</p>
+    <p>ゆっくりとした非日常を堪能できます🍀</p></div>
     
 
     <% elsif @shindan.question == "1121" %>
-    <h6>こんなものはどうですか？</h6>
-    <p>グルメ</p>
+    <div class="shindan_show_title">
+    <p>でかけたい、けどゆっくりしたい…そんなあなたへ！</p></div>
+    <div class="shindan_show_2">
+    <p>スポーツ観戦（スポーツ観戦）</p></div>
+    <div class="shindan_show_3">
+    <p>スポーツ観戦で熱くなってみてはいかがでしょう✨</p>
+    <p>分析して勝敗予想をして盛り上がったりして…！楽しそう😍</p></div>
 
 
     <% elsif @shindan.question == "1122" %>
-    <h6>こんなものはどうですか？</h6>
-    <p>アウトドア</p>
-    <p>エンタメ</p>
+    <div class="shindan_show_title">
+    <p>でかけたい・けどゆっくりしたい…そんなあなたへ！</p></div>
+    <div class="shindan_show_2">
+    <p>キャンプ（旅行・アウトドア）</p></div>
+    <div class="shindan_show_3">
+    <p>キャンプなどで自然を感じながらゆっくりしてみてはいかが？✨</p>
+    <p>ゆっくりとした非日常を堪能できます🍀</p></div>
 
     <% elsif @shindan.question == "1211" %>
-    <h6>こんなものはどうですか？</h6>
-    <p>踊る・ダンス</p>
-    <p>資格・スキルアップ</p>
-    <p>美容</p>
+    <div class="shindan_show_title">
+    <p>動くのが好き・家にいる方が好き、そんなあなたへ！</p></div>
+    <div class="shindan_show_2">
+    <p>体つくり（「美容・健康」へ）</p></div>
+    <div class="shindan_show_3">
+    <p>筋トレや美容に気を付けた食事など、ボディメイクをしてみてはどうでしょう？✨</p>
+    <p>心身ともに充実した日々へ…🥰</p></div>
 
     <% elsif @shindan.question == "1212" %>
-    <h6>こんなものはどうですか？</h6>
-    <p>踊る・ダンス</p>
-    <p>音楽</p>
+    <div class="shindan_show_title">
+    <p>動きたいけど家にいたい！そんなあなたへ！</p></div>
+    <div class="shindan_show_2">
+    <p>ダンス（ダンス）</p></div>
+    <div class="shindan_show_3">
+    <p>思いのままに思いっきり体を動かそう✨</p>　
+    <p>音立てちゃだめ！って人も足音少ないダンスもあるからぜひみてみて🎶</p></div>
 
     <% elsif @shindan.question == "1221" %>
-    <h6>こんなものはどうですか？</h6>
-    <p>料理</p>
-    <p>観戦</p>
+    <div class="shindan_show_title">
+    <p>動くことが好きだけどゆっくりしてたい…そんなあなたへ！</p></div>
+    <div class="shindan_show_2">
+    <p>スポーツ観戦（スポーツ・観戦）</p></div>
+    <div class="shindan_show_3">
+    <p>動画などでスポーツ観戦を見てみてはいかが？✨</p>
+    <p>家でゆっくり勝敗予想したり分析しちゃったり…？！</p></div>
 
     <% elsif @shindan.question == "1222" %>
-    <h6>こんなものはどうですか？</h6>
-    <p>観戦</p>
-    <p>音楽</p>
+    <div class="shindan_show_title">
+    <p>家でゆっくりしたい…そんなあなたへ！</p></div>
+    <div class="shindan_show_2">
+    <p>アクション、レース、格闘ゲーム（ゲーム）</p></div>
+    <div class="shindan_show_3">
+    <p>ゲームで盛り上がってみるのはどうでしょう？✨</p>
+    <p>白熱して時間を忘れちゃうかもしれません🔥</p></div>
 
     <% elsif @shindan.question == "2111" %>
-    <h6>こんなものはどうですか？</h6>
-    <p>旅行</p>
-    <p>稼ぐ</p>
+    <div class="shindan_show_title">
+    <p>行動的・考えて動くタイプのあなたへ！</p></div>
+    <div class="shindan_show_2">
+    <p>旅行（旅行・アウトドア）</p></div>
+    <div class="shindan_show_3">
+    <p>計画を立てていろんなところにいこう！人、場所、様々な素敵な出会いがあるかも🥰</p></div>
 
     <% elsif @shindan.question == "2112" %>
-    <h6>こんなものはどうですか？</h6>
-    <p>奉仕活動</p>
-    <p>旅行</p>
+    <div class="shindan_show_title">
+    <p>行動的で気持ちにまっすぐなあなたへ！</p></div>
+    <div class="shindan_show_2">
+    <p>ライブ（音楽・エンタメなど）</p></div>
+    <div class="shindan_show_3">
+    <p>音楽やお笑いなど、何かのライブに行ってみてはいかがでしょう？✨</p>
+    <p>心動く何かに出会えるかもしれません…💖</p></div>
 
     <% elsif @shindan.question == "2121" %>
-    <h6>こんなものはどうですか？</h6>
-    <p>コレクション</p>
-    <p>グルメ</p>
+    <div class="shindan_show_title">
+    <p>でかけたい、けどゆっくりしたい…そんなあなたへ！</p></div>
+    <div class="shindan_show_2">
+    <p>旅・キャンプ（旅・アウトドア）</p></div>
+    <div class="shindan_show_3">
+    <p>ゆーっくりな計画を立てて、普段いったことのない場所へ行ってみてはいかがでしょう？✨</p>
+    <p>非日常を味わい心が癒されるかも…💛</p></div>
 
     <% elsif @shindan.question == "2122" %>
-    <h6>こんなものはどうですか？</h6>
-    <p>芸術・鑑賞</p>
+    <div class="shindan_show_title">
+    <p>でかけたいけど、ゆっくりしたいあなたへ！</p></div>
+    <div class="shindan_show_2">
+    <p>美術館巡り（芸術・鑑賞）</p></div>
+    <div class="shindan_show_3">
+    <p>心揺さぶられる作品をみてゆったりした時間を過ごしてみてはいかかがしょうか？✨</p></div>
    
 
     <% elsif @shindan.question == "2211" %>
-    <h6>こんなものはどうですか？</h6>
-    <p>美容</p>
-    <p>資格・スキルアップ</p>
+    <div class="shindan_show_title">
+    <p>考えて動くことが出来る・何かしていたい…そんなあなたへ！</p></div>
+    <div class="shindan_show_2">
+    <p>自分磨き（美容・健康かスキルアップ）</p></div>
+    <div class="shindan_show_3">
+    <p>自分をどんどん成長させていこう！趣味で更に自分を磨けるなんてかっこいいなぁ…✨</p></div>
 
     <% elsif @shindan.question == "2212" %>
-    <h6>こんなものはどうですか？</h6>
-    <p>作る</p>
-    <p>料理、育てる</p>
-    <p>ゲーム</p>
+    <div class="shindan_show_title">
+    <p>家でなにかしたいなぁ…そんなあなたへ！</p></div>
+    <div class="shindan_show_2">
+    <p>ハンドメイド（作る・育てる）</p></div>
+    <div class="shindan_show_3">
+    <p>おうちでなにか自分好みのものを作ってみてはいかがでしょう？✨</p>
+    <p>世界に一つの特別なものの誕生です🎊</p></div>
 
     <% elsif @shindan.question == "2221" %>
-    <h6>こんなものはどうですか？</h6>
-    <p>読書</p>
-    <p>エンタメ</p>
+    <div class="shindan_show_title">
+    <p>おうちでゆっくり…♡そんなあなたへ！</p></div>
+    <div class="shindan_show_2">
+    <p>読書（読書）</p></div>
+    <div class="shindan_show_3">
+    <p>おうちでまったり…本の世界に没入してみては？✨</p>
+    <p>おうちの中で、いろんな冒険ができるかも！😎</p></div>
 
     <% elsif @shindan.question == "2222" %>
-    <h6>こんなものはどうですか？</h6>
-    <p>エンタメ</p>
-    <p>読書</p>
+    <div class="shindan_show_title">
+    <p>おうちでゆっくりしたい…♡そんなあなたへ！</p></div>
+    <div class="shindan_show_2">
+    <p>何かを育てる（作る・育てる）</p></div>
+    <div class="shindan_show_3">
+    <p>植物か何かをおうちで育ててみては？✨</p>
+    <p>その子とおうちでまったりした時間はきっとあなたの癒しになるはず…😊</p></div>
 
 　　<% end %>
 
    
 
-　</div>
+　
 </div>

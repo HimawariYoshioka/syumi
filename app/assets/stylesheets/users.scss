@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+
 .godon{
     background-image: url("cats.jpg");
     background-size: cover;
@@ -20,28 +21,59 @@
 
 .field1{
     margin-left: 50px;
-    height: 80px;
-    margin-top: 25px;
+    height: 70px;
+    margin-top: 40px;
+
+    .field_input{
+        width: 200px;
+        height: 20px;
+        background-color: white;
+    }
 }
 
 .field2{
     margin-left: 125px;
-    height: 80px;
+    height: 50px;
+
+.field_input{
+    width: 200px;
+    height: 20px;
+    background-color: white;
+}
 }
 
 .field3{
     margin-left: 200px;
     height: 80px;
+
+    .field_input{
+        width: 200px;
+        height: 20px;
+        background-color: white;
+    }
 }
 
 .field4{
     margin-left: 270px;
-    height: 80px;
+    height: 100px;
+
+    .field_input{
+        width: 200px;
+        height: 20px;
+        background-color: white;
+    }
 }
 
 .actions{
     margin-left: 470px;
-    height: 40px;
+    
+    height: px;
+
+    .field_input{
+        width: 200px;
+        height: 20px;
+        background-color: white;
+    }
 }
 
 .field-image {
@@ -67,70 +99,40 @@
     margin-left: 200px;
     height: 60px;
     margin-top: 100px;
+
+    .field_input{
+        width: 200px;
+        height: 20px;
+        background-color: white;
+    }
+    
 }
 
 .field6{
     margin-left: 200px;
     height: 60px;
     margin-top: 20px;
+    .field_input{
+        width: 200px;
+        height: 20px;
+        background-color: white;
+    }
 }
 
 .field7{
     margin-left: 200px;
     height: 60px;
     margin-top: 20px;
+    .field_input{
+        width: 200px;
+        height: 20px;
+        background-color: white;
+    }
 }
 
 .name{
 
 }
 
-.mypage{
-    display:flex;
-    width: 100%;
- }
- .image{
-    margin: 20px;
- }
- .profile{
-    width: 50%;
-    margin: 20px;
-}
-.edit{
-    margin: 130px 50px 0px;
-    
-}
-
-
-
-
-.profile{
-    position: relative;
-    margin-bottom: 4em;
-    padding: 2.0rem 2rem;
-    border-radius: 20px;
-    background: #fbd7d7;}
-
-.profile:before,
-.profile:after {
-  position: absolute;
-  content: '';
-  border-radius: 50%;
-  background: #fbd7d7;
-}
-
-.profile:before {
-  right: 15px;
-  bottom: -15px;
-  width: 45px;
-  height: 60px;
-}
-
-.profile:after {
-  right: 45px;
-  bottom: -30px;
-  width: 20px;
-  height: 15px;
-}
 
 
